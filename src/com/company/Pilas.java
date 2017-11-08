@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.xml.soap.SOAPPart;
+import java.nio.charset.MalformedInputException;
 
 /**
  * Created by George on 08/11/2017.
@@ -57,4 +58,24 @@ public class Pilas {
     }
     }
 
+    public void Maxi_Mini(){
+        Nodo temp =top;
+        int Max = temp.getValor();
+        int Min = temp.getProx().getValor();
+        if (temp != null){
+            while (temp != null){
+                if(Max< temp.getValor()){
+                Max= temp.getValor();}
+                if (Min> temp.getValor()){
+                    Min= temp.getValor();
+                }
+                temp = temp.getProx();
+            }
+            System.out.println("El valor máximo es: " + Max);
+            System.out.println("El valor mínimo es: " + Min);
+
+        }else{
+            System.out.println("La pila esta vacia");
+        }
+    }
 }
