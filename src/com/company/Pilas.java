@@ -8,10 +8,12 @@ import java.nio.charset.MalformedInputException;
  */
 public class Pilas {
     private Nodo top;
-
+    private int tamaño;
     public Pilas() {
         top = null;
+        tamaño=0;
     }
+    public int getTamaño(){return tamaño;}
 
     public boolean Vacia(){
         return (top==null);
@@ -26,6 +28,7 @@ public class Pilas {
             NuevoNodo.setProx(top);
             top = NuevoNodo;
         }
+        tamaño ++;
     }
     //Método para buscar
     public  void Peek(){
@@ -53,8 +56,9 @@ public class Pilas {
     if (!Vacia()){
         System.out.println("Dato extraido: " + top.getValor());
         top = top.getProx();
+        tamaño --;
     }else {
-        System.out.println("La piula esta vacia");
+        System.out.println("La pila esta vacia");
     }
     }
 
