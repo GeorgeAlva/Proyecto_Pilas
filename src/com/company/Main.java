@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 	// write your code here
+        Pilas pila= new Pilas();
         Scanner sc = new Scanner(System.in);
         int opcion;
         do {
@@ -12,16 +13,23 @@ public class Main {
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:
+                    System.out.println("inserta un número entero.");
+                    pila.Push(sc.nextInt());
                     break;
                 case 2:
+                    pila.Peek();
                     break;
                 case 3:
+                    pila.Cima();
                     break;
                 case 4:
+                    pila.Pop();
                     break;
                 case 5:
+                    //pila.getTamaño();
                     break;
                 case 6:
+                   //pila.Maxi_Mini();
                     break;
                 case 7:
                     break;

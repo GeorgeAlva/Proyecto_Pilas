@@ -36,7 +36,7 @@ public class Pilas {
                 temp = temp.getProx();
             }
         }else{
-            System.out.println("La pila esta vacia");
+            System.out.println("La pila esta vacía");
         }
     }
     //Método para bucar
@@ -44,7 +44,7 @@ public class Pilas {
         if (!Vacia()){
             System.out.println("Cima: " + top.getValor());
         }else{
-            System.out.println("La pila eta vacia");
+            System.out.println("La pila eta vacía");
         }
     }
     //Métod para borrar
@@ -53,8 +53,9 @@ public class Pilas {
         System.out.println("Dato extraido: " + top.getValor());
         top = top.getProx();
     }else {
-        System.out.println("La piula esta vacia");
+        System.out.println("La pila esta vacía");
     }
     }
+
 
 }
